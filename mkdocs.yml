@@ -1,0 +1,103 @@
+site_name: The Channel Practice
+site_description: A beginner guide to starting and growing a YouTube channel, long-form and Shorts, with sources for every claim.
+site_author: Breno Treviso
+site_url: https://brenotreviso.github.io/channel-practice/
+repo_url: https://github.com/brenotreviso/channel-practice
+repo_name: brenotreviso/channel-practice
+edit_uri: edit/main/docs/
+copyright: Text CC BY-NC-SA 4.0 · Templates MIT · © 2026 Breno Bergamin (Breno Treviso) · Not affiliated with or endorsed by YouTube or Google. YouTube is a trademark of Google LLC.
+docs_dir: docs
+hooks:
+  - scripts/mkdocs_hooks.py
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/open-links-new-tab.js
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Nunito
+    code: JetBrains Mono
+  palette:
+    - scheme: default
+      primary: red
+      accent: amber
+      toggle: { icon: material/weather-night, name: Dark mode }
+    - scheme: slate
+      primary: red
+      accent: amber
+      toggle: { icon: material/weather-sunny, name: Light mode }
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc: { permalink: true }
+  - pymdownx.details
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tasklist: { custom_checkbox: true }
+
+# MkDocs default-excludes a top-level docs/templates/ folder (it reserves the name).
+# Our worksheets live in repo-root templates/, symlinked there — re-include them.
+exclude_docs: |
+  !/templates/
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+nav:
+  - Home: index.md
+  - Guide:
+      - 0 · Start here: 00-start-here.md
+      - "Meet Maya: season 2": meet-maya.md
+      - 1 · How YouTube finds viewers: 01-how-youtube-finds-viewers.md
+      - 2 · Set up your channel: 02-channel-setup.md
+      - 3 · Niche and ideas: 03-niche-and-ideas.md
+      - 4 · Your first long video: 04-first-long-video.md
+      - 5 · Titles and thumbnails: 05-titles-and-thumbnails.md
+      - 6 · Hooks and retention: 06-hooks-and-retention.md
+      - 7 · Shorts and long-form together: 07-shorts-and-long-form.md
+      - 8 · Analytics basics: 08-analytics.md
+      - 9 · Cadence and a week you can keep: 09-cadence.md
+      - 10 · Community: 10-community.md
+      - "11 · The Partner Program, and why it isn’t your goal yet": 11-partner-program.md
+      - 12 · Agent instructions: 12-agent-instructions.md
+      - 13 · Library and extras: 13-library-and-extras.md
+  - Real creators: real-creators.md
+  - Platform snapshot: platform-snapshot.md
+  - Templates:
+      - templates/README.md
+      - Video plan: templates/video-plan.md
+      - Long-video script: templates/long-video-script.md
+      - Shorts script: templates/shorts-script.md
+      - Upload calendar: templates/upload-calendar.md
+      - Analytics review: templates/analytics-review.md
+  - Checklists:
+      - checklists/README.md
+      - Channel setup: checklists/channel-setup.md
+      - First video: checklists/first-video.md
+      - Title and thumbnail: checklists/title-and-thumbnail.md
+      - Before you upload: checklists/before-you-upload.md
+      - 48-hour review: checklists/review-48h.md
+      - YPP readiness: checklists/ypp-readiness.md
+  - Glossary: glossary.md
+  - Sources: sources.md

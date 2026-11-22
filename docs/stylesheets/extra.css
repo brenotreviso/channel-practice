@@ -1,0 +1,24 @@
+/* Accessible red (WCAG AA, normal text 4.5:1).
+   Light: header and links #c4170c on white, 6.04:1.
+   Dark: header background #c4170c with white text, 6.04:1
+   (Material's #ef5552 was 3.45:1). Link text stays #ef5552,
+   4.67:1 on the slate page background #1e2129. #c4170c as
+   link text on that background would be 2.66:1. */
+[data-md-color-scheme="default"][data-md-color-primary="red"] {
+  --md-primary-fg-color:        #c4170c; /* header background, links */
+  --md-primary-fg-color--light: #d6362b;
+  --md-primary-fg-color--dark:  #9e1209;
+  --md-primary-bg-color:        #ffffff; /* header text */
+  --md-typeset-a-color:         #c4170c; /* link text */
+}
+[data-md-color-scheme="default"][data-md-color-accent="amber"] {
+  --md-accent-fg-color:              #9e1209; /* hover/focus: darker red, not amber */
+  --md-accent-fg-color--transparent: rgba(158, 18, 9, 0.1);
+}
+[data-md-color-scheme="slate"][data-md-color-primary="red"] {
+  --md-primary-fg-color:        #c4170c; /* header background */
+  --md-primary-fg-color--light: #d6362b;
+  --md-primary-fg-color--dark:  #9e1209; /* sidebar repo link; white text 8.25:1 */
+  --md-primary-bg-color:        #ffffff; /* header text */
+  --md-typeset-a-color:         #ef5552; /* link text on #1e2129 */
+}
